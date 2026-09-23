@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fdf4ff, #eef2ff);
+    color: #1e1b4b;
+}
+/*------------------------------*/
+/*--|estilo_afiches_digitales|--*/
+/*------------------------------*/
+.contenedor_afiches {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 15px 40px rgba(30, 27, 75, 0.12);
+}
+.encabezado_afiches {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.icono_afiches {
+    margin-bottom: 10px;
+    color: #7c3aed;
+    font-size: 38px;
+}
+.encabezado_afiches h1 {
+    margin-bottom: 8px;
+    color: #312e81;
+    font-size: 34px;
+}
+.encabezado_afiches p {
+    color: #64748b;
+    font-size: 15px;
+}
+.zona_afiche {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+/*----------------------------------------*/
+/*--|estilo_formulario_datos_del_evento|--*/
+/*----------------------------------------*/
+.panel_datos {
+    padding: 24px;
+    border: 1px solid #e9d5ff;
+    border-radius: 16px;
+    background: #faf5ff;
+}
+.panel_datos h2 {
+    margin-bottom: 20px;
+    color: #581c87;
+    font-size: 20px;
+}
+.panel_datos h2 i {
+    margin-right: 7px;
+}
+.panel_datos label {
+    display: block;
+    margin-bottom: 6px;
+    color: #475569;
+    font-size: 13px;
+    font-weight: bold;
+}
+.panel_datos input, .panel_datos textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 11px;
+    border: 1px solid #d8b4fe;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #1e1b4b;
+    font-family: Arial, sans-serif;
+}
+.panel_datos textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.panel_datos input:focus, .panel_datos textarea:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.10);
+}
+.botones_formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.botones_formulario button {
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+#cambiar_tema {
+    background: #7c3aed;
+}
+#cambiar_tema:hover {
+    background: #6d28d9;
+}
+#restaurar_afiche {
+    background: #475569;
+}
+#restaurar_afiche:hover {
+    background: #334155;
+}
+/*-------------------*/
+/*--|estilo_afiche|--*/
+/*-------------------*/
+.zona_visual {
+    display: flex;
+    justify-content: center;
+}
+.afiche_evento {
+    position: relative;
+    width: 100%;
+    min-height: 540px;
+    padding: 40px 30px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #312e81, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 15px 35px rgba(49, 46, 129, 0.30);
+    text-align: center;
+}
+.afiche_evento::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -80px;
+    right: -60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+}
+.afiche_evento::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    bottom: -60px;
+    left: -50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.10);
+
+}
+.etiqueta_evento {
+    position: relative;
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.icono_evento {
+    position: relative;
+    margin: 30px 0 15px;
+    font-size: 42px;
+}
+.afiche_evento h2 {
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+.datos_evento {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.datos_evento p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    font-size: 14px;
+}
+.datos_evento i {
+    font-size: 15px;
+}
+.descripcion_evento {
+    position: relative;
+    max-width: 430px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+}
+.pie_afiche {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+.pie_afiche strong {
+    font-size: 23px;
+}
+.pie_afiche span {
+    font-size: 12px;
+    opacity: 0.8;
+}

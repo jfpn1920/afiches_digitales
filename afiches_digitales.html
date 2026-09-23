@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afiches digitales</title>
+    <link rel="stylesheet" href="afiches_digitales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="afiches_digitales.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------->
+    <!--|estructuracion_afiches_digitales|-->
+    <!-------------------------------------->
+    <main class="contenedor_afiches">
+        <header class="encabezado_afiches">
+            <div class="icono_afiches">
+                <i class="fa-solid fa-image"></i>
+            </div>
+            <h1>Afiches Digitales</h1>
+            <p>Diseña tu propio afiche para un evento.</p>
+        </header>
+        <section class="zona_afiche">
+            <!--------------------------------->
+            <!--|formulario_datos_del_evento|-->
+            <!--------------------------------->
+            <div class="panel_datos">
+                <h2><i class="fa-solid fa-pen"></i>Datos del evento</h2>
+                <form id="formulario_afiche">
+                    <label for="nombre_evento">Nombre del evento</label>
+                    <input type="text" id="nombre_evento" placeholder="Nombre del evento">
+                    <label for="fecha_evento">Fecha</label>
+                    <input type="date" id="fecha_evento">
+                    <label for="hora_evento">Hora</label>
+                    <input type="time" id="hora_evento">
+                    <label for="lugar_evento">Lugar</label>
+                    <input type="text" id="lugar_evento" placeholder="Lugar del evento">
+                    <label for="precio_evento">Entrada</label>
+                    <input type="text" id="precio_evento" placeholder="Ej: $20">
+                    <label for="descripcion_evento">Descripción</label>
+                    <textarea id="descripcion_evento" placeholder="Escribe una descripción..."></textarea>
+                    <div class="botones_formulario">
+                        <button type="button" id="cambiar_tema"><i class="fa-solid fa-palette"></i>Cambiar tema</button>
+                        <button type="button" id="restaurar_afiche"><i class="fa-solid fa-rotate-left"></i>Restaurar</button>
+                    </div>
+                </form>
+            </div>
+            <!------------>
+            <!--|afiche|-->
+            <!------------>
+            <div class="zona_visual">
+                <article id="afiche_evento" class="afiche_evento">
+                    <span class="etiqueta_evento">EVENTO ESPECIAL</span>
+                    <div class="icono_evento">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h2 id="vista_nombre">Mi Evento</h2>
+                    <div class="datos_evento">
+                        <p><i class="fa-solid fa-calendar"></i><span id="vista_fecha">Fecha del evento</span></p>
+                        <p><i class="fa-solid fa-clock"></i><span id="vista_hora">Hora del evento</span></p>
+                        <p><i class="fa-solid fa-location-dot"></i><span id="vista_lugar">Lugar del evento</span></p>
+                    </div>
+                    <p id="vista_descripcion" class="descripcion_evento">Aquí aparecerá la descripción de tu evento.</p>
+                    <div class="pie_afiche">
+                        <strong id="vista_precio">Entrada gratuita</strong>
+                        <span>¡Te esperamos!</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
